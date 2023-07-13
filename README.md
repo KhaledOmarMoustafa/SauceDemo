@@ -1,5 +1,5 @@
 # SauceDemo
-Automation Testing An Ecommerce Website Using Java And Selenium Framework And TestNG Assertion
+Automation Testing An Ecommerce Website Using Java Programming Language , Selenium Framework And TestNG Assertion
 In this project im testing the main functions of an ECommerce Demo Website called SauceDemo 
 Here Are The Steps of The Test Cases that are generated in order 
 1-open the browser and go to the website "https://www.saucedemo.com/"
