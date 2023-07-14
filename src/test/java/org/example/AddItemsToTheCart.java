@@ -1,12 +1,19 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class AddItemsToTheCart {
 
+    private String name;
     public void addFirstItem() throws InterruptedException {
+        name = "remove-sauce-labs-backpack";
         Thread.sleep(500);
-        OpenBrowserAndCloseIt.driver.findElement(By.name("add-to-cart-sauce-labs-backpack")).click();
+        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("img[alt=\"Sauce Labs Backpack\"]")).click();
+        OpenBrowserAndCloseIt.driver.findElement(By.xpath("//button[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
+        Assert.assertEquals(OpenBrowserAndCloseIt.driver.findElement(By.id("remove-sauce-labs-backpack")).getAttribute("name"), name);
+        Thread.sleep(200);
+        OpenBrowserAndCloseIt.driver.findElement(By.id("back-to-products")).click();
 
     }
 
