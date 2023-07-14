@@ -5,16 +5,24 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class AppTest {
+public class Runner {
 
-    OpenBrowserAndCloseIt opc = new OpenBrowserAndCloseIt();
-    Login l = new Login();
-    AddItemsToTheCart ac = new AddItemsToTheCart();
-    GoToShoppingCartAndConfirm gs = new GoToShoppingCartAndConfirm();
-    LogOut lo = new LogOut();
+    OpenBrowserAndCloseIt opc;
+    Login l;
+    AddItemsToTheCart ac;
+    GoToShoppingCartAndConfirm gs;
+    LogOut lo;
+
+    public Runner() {
+        opc = new OpenBrowserAndCloseIt();
+        l = new Login();
+        ac = new AddItemsToTheCart();
+        gs = new GoToShoppingCartAndConfirm();
+        lo = new LogOut();
+    }
 
     @BeforeTest
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() {
         opc.openBrowser();
     }
 

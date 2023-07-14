@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OpenBrowserAndCloseIt {
-    static public WebDriver driver;
+    protected static WebDriver driver;
 
 
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() {
 
         driver = new ChromeDriver();
         String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
