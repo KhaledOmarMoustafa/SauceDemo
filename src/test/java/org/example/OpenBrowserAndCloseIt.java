@@ -1,10 +1,13 @@
 package org.example;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OpenBrowserAndCloseIt {
     protected static WebDriver driver;
+
+    protected static JavascriptExecutor java;
 
 
     public void openBrowser() {
@@ -19,6 +22,7 @@ public class OpenBrowserAndCloseIt {
 
         driver.navigate().to("https://www.saucedemo.com/");
 
+        java = (JavascriptExecutor) OpenBrowserAndCloseIt.driver;
     }
 
     public void closeBrower() throws InterruptedException {

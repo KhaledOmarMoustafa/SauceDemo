@@ -7,9 +7,8 @@ public class Login {
     public void username() throws InterruptedException {
         OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[placeholder=\"Username\"]")).sendKeys("standard_user");
         Thread.sleep(500);
-
-
     }
+
 
     public void password() throws InterruptedException {
         Thread.sleep(500);

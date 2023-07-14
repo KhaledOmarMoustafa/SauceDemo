@@ -7,6 +7,7 @@ public class AddItemsToTheCart {
 
     private String name;
     public void addFirstItem() throws InterruptedException {
+
         name = "remove-sauce-labs-backpack";
         Thread.sleep(500);
         OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("img[alt=\"Sauce Labs Backpack\"]")).click();
@@ -17,7 +18,9 @@ public class AddItemsToTheCart {
 
     }
 
+
     public void addSecondItem() throws InterruptedException {
+        OpenBrowserAndCloseIt.java.executeScript("scroll(0,250)");
         Thread.sleep(500);
         OpenBrowserAndCloseIt.driver.findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt")).click();
 

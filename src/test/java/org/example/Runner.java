@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class Runner {
 
+
     OpenBrowserAndCloseIt opc;
     Login l;
     AddItemsToTheCart ac;
@@ -19,6 +20,7 @@ public class Runner {
         ac = new AddItemsToTheCart();
         gs = new GoToShoppingCartAndConfirm();
         lo = new LogOut();
+
     }
 
     @BeforeTest

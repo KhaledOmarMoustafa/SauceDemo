@@ -10,6 +10,8 @@ public class GoToShoppingCartAndConfirm {
         OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("a[class=\"shopping_cart_link\"]")).click();
         Assert.assertEquals(OpenBrowserAndCloseIt.driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
 
+        OpenBrowserAndCloseIt.java.executeScript("scroll(0,250)");
+
 
     }
 
