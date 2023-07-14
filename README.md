@@ -1,7 +1,8 @@
 # SauceDemo
 Automation Testing An Ecommerce Website Using Java Programming Language , Selenium Framework And TestNG Assertion
 In this project im testing the main functions of an ECommerce Demo Website called SauceDemo 
-Here Are The Steps of The Test Cases that are generated in order 
+Here Are The Steps of The Test Cases that are Executed in order ,
+Note : "The Runner Class is for running the tests"
 1-open the browser and go to the website "https://www.saucedemo.com/"
 2-login using Valid Username ("standard_user") And Password ("secret_sauce") And then Click "Login"
 3-Add a number of items to the shopping cart 
