@@ -8,6 +8,7 @@ B-Install all necessary dependencies (e.g., Java JDK).
 C-Open the project in your preferred IDE.
 D-Execute the test cases using the Runner Class.
 
+The Executed Test Cases Are Generated in order as Follows:
 1-open the browser and go to the website "https://www.saucedemo.com/"
 2-login using Valid Username ("standard_user") And Password ("secret_sauce") And then Click "Login"
 3-Add a number of items to the shopping cart 
