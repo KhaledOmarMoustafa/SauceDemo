@@ -6,7 +6,8 @@ To get started with this project:
 A-Clone this repository to your local machine.
 B-Install all necessary dependencies (e.g., Java JDK).
 C-Open the project in your preferred IDE.
-D-Execute the test cases using the Runner Class.
+D-Execute the test cases using the TestNG Class to generate a TestNG Report.
+
 
 The Executed Test Cases Are Generated in order as Follows:
 1-open the browser and go to the website "https://www.saucedemo.com/"
