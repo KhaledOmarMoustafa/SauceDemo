@@ -10,16 +10,9 @@ D-Execute the test cases using the Runner Class.
 
 The Executed Test Cases Are Generated in order as Follows:
 1-open the browser and go to the website "https://www.saucedemo.com/"
-2-login using Valid Username ("standard_user") And Password ("secret_sauce") And then Click "Login"
+2-Successful Login using a valid username and password
 3-Add a number of items to the shopping cart 
-4-Click on the "Shopping Cart" on the top right side of the page to check the items that you have added
-5-Click "Checkout" 
-4-Enter Valid User Details Firstname , Lastname , Postalcode 
-5-Click "Continue" 
-6-Click "Finish"
-7-Click "Back Home"
-8-Click on the "Burger Icon" on the Top left side of the page 
-9-Click "Log Out" 
-10-User is logged Out
-
+4-Complete the order 
+5-Logout
+6-Close the browser
 
