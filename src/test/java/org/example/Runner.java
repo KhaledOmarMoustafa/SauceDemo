@@ -27,7 +27,7 @@ public class Runner {
     }
 
     @Test(priority = 1)
-    public void username() throws InterruptedException {
+    public void successfulLogin() throws InterruptedException {
         l.username("standard_user");
         l.password("secret_sauce");
         l.login();
@@ -36,7 +36,7 @@ public class Runner {
     }
 
     @Test(priority = 2)
-    public void addFirstItem() throws InterruptedException {
+    public void addItemsToTheCart() throws InterruptedException {
 
         ac.addFirstItem();
         ac.addSecondItem();
@@ -45,7 +45,7 @@ public class Runner {
 
 
     @Test(priority = 3)
-    public void shoppingCart() throws InterruptedException {
+    public void completeOrder() throws InterruptedException {
         gs.shoppingCart();
         gs.checkOutBtn();
         gs.firstname("khaled");
@@ -58,7 +58,7 @@ public class Runner {
 
 
     @Test(priority = 4)
-    public void burgerIcon() throws InterruptedException {
+    public void logOut() throws InterruptedException {
 
         lo.burgerIcon();
         lo.clickLogout();
