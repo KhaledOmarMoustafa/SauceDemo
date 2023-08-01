@@ -22,21 +22,22 @@ public class GoToShoppingCartAndConfirm {
         Assert.assertEquals(OpenBrowserAndCloseIt.driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
     }
 
-    public void firstname() throws InterruptedException {
+    public void firstname(String fName) throws InterruptedException {
+
         Thread.sleep(500);
-        OpenBrowserAndCloseIt.driver.findElement(By.id("first-name")).sendKeys("khaled");
+        OpenBrowserAndCloseIt.driver.findElement(By.id("first-name")).sendKeys(fName);
 
     }
 
-    public void lastname() throws InterruptedException {
+    public void lastname(String lName) throws InterruptedException {
         Thread.sleep(500);
-        OpenBrowserAndCloseIt.driver.findElement(By.name("lastName")).sendKeys("omar");
+        OpenBrowserAndCloseIt.driver.findElement(By.name("lastName")).sendKeys(lName);
 
     }
 
-    public void postalCode() throws InterruptedException {
+    public void postalCode(String pCode) throws InterruptedException {
         Thread.sleep(500);
-        OpenBrowserAndCloseIt.driver.findElement(By.id("postal-code")).sendKeys("12554");
+        OpenBrowserAndCloseIt.driver.findElement(By.id("postal-code")).sendKeys(pCode);
 
 
     }

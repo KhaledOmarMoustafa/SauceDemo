@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 
 public class Login {
 
-    public void username() throws InterruptedException {
-        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[placeholder=\"Username\"]")).sendKeys("standard_user");
+    public void username(String uName) throws InterruptedException {
+        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[placeholder=\"Username\"]")).sendKeys(uName);
         Thread.sleep(500);
     }
 
 
-    public void password() throws InterruptedException {
+    public void password(String pWard) throws InterruptedException {
         Thread.sleep(500);
-        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[placeholder=\"Password\"]")).sendKeys("secret_sauce");
+        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[placeholder=\"Password\"]")).sendKeys(pWard);
 
     }
 
