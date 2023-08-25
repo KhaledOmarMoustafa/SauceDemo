@@ -1,33 +1,44 @@
 package org.example;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 public class CreateOrder {
 
     public void CreateOrder(String fName, String lName, String pCode) throws InterruptedException {
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("a[class=\"shopping_cart_link\"]")).click();
-        Assert.assertEquals(OpenBrowserAndCloseIt.driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        By cart = By.cssSelector("a[class=\"shopping_cart_link\"]");
+        OpenBrowserAndCloseIt.driver.element().click(cart);
+        OpenBrowserAndCloseIt.driver.assertThat().browser().url().equals("https://www.saucedemo.com/cart.html");
+        Thread.sleep(250);
 
-        OpenBrowserAndCloseIt.java.executeScript("scroll(0,250)");
+        By checkout = By.xpath("//button[@class=\"btn btn_action btn_medium checkout_button\"]");
+        OpenBrowserAndCloseIt.driver.element().click(checkout);
+        OpenBrowserAndCloseIt.driver.assertThat().browser().url().equals("https://www.saucedemo.com/checkout-step-one.html");
+        Thread.sleep(250);
+
+        By fn = By.id("first-name");
+        OpenBrowserAndCloseIt.driver.element().type(fn, fName);
 
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.xpath("//button[@class=\"btn btn_action btn_medium checkout_button\"]")).click();
-        Assert.assertEquals(OpenBrowserAndCloseIt.driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
+        By ln = By.name("lastName");
+        OpenBrowserAndCloseIt.driver.element().type(ln, lName);
+
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.id("first-name")).sendKeys(fName);
+        By pc = By.id("postal-code");
+        OpenBrowserAndCloseIt.driver.element().type(pc, pCode);
+
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.name("lastName")).sendKeys(lName);
+        By submit = By.cssSelector("input[class=\"submit-button btn btn_primary cart_button btn_action\"]");
+        OpenBrowserAndCloseIt.driver.element().click(submit);
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.id("postal-code")).sendKeys(pCode);
+
+        By action = By.xpath("//button[@class=\"btn btn_action btn_medium cart_button\"]");
+        OpenBrowserAndCloseIt.driver.element().click(action);
         Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.cssSelector("input[class=\"submit-button btn btn_primary cart_button btn_action\"]")).click();
-        Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.xpath("//button[@class=\"btn btn_action btn_medium cart_button\"]")).click();
-        Thread.sleep(250);
-        OpenBrowserAndCloseIt.driver.findElement(By.id("back-to-products")).click();
-        Assert.assertEquals(OpenBrowserAndCloseIt.driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+
+        By back = By.id("back-to-products");
+        OpenBrowserAndCloseIt.driver.element().click(back);
+        OpenBrowserAndCloseIt.driver.assertThat().browser().url().equals("https://www.saucedemo.com/inventory.html");
 
 
     }

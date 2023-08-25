@@ -1,28 +1,20 @@
 package org.example;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.shaft.driver.SHAFT;
 
 public class OpenBrowserAndCloseIt {
-    protected static WebDriver driver;
 
-    protected static JavascriptExecutor java;
+    static SHAFT.GUI.WebDriver driver;
 
 
     public void openBrowser() {
 
-        driver = new ChromeDriver();
-        String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", chromePath);
+        driver = new SHAFT.GUI.WebDriver();
 
+        driver.browser().maximizeWindow();
 
-        driver.manage().window().maximize();
+        driver.browser().navigateToURL("https://www.saucedemo.com/");
 
-
-        driver.navigate().to("https://www.saucedemo.com/");
-
-        java = (JavascriptExecutor) OpenBrowserAndCloseIt.driver;
     }
 
     public void closeBrower() throws InterruptedException {

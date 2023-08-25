@@ -1,8 +1,12 @@
 package org.example;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 
 public class Runner {
@@ -26,15 +30,16 @@ public class Runner {
         opc.openBrowser();
     }
 
-    @Test(priority = 1)
-    public void successfulLogin() throws InterruptedException {
-        l.Login("standard_user", "secret_sauce");
+
+    @Test(priority = 1, dataProvider = "readTheSheet")
+    public void successfulLogin(String username, String password) throws InterruptedException {
+        l.Login(username, password);
     }
 
     @Test(priority = 2)
     public void addItemsToTheCart() throws InterruptedException {
 
-        ac.AddItemsToTheCart();
+        ac.AddItemsToTheCart("remove-sauce-labs-backpack");
     }
 
 
@@ -49,13 +54,19 @@ public class Runner {
     public void logOut() throws InterruptedException {
 
         lo.LogOut();
-
     }
 
 
     @AfterTest
     public void closeBrowser() throws InterruptedException {
         opc.closeBrower();
+    }
+
+    @DataProvider(name = "readTheSheet")
+    public String[][] readTheSheet() throws IOException, InvalidFormatException {
+        Read_Data rd = new Read_Data();
+        return rd.read_Data();
+
     }
 
 
