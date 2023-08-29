@@ -36,6 +36,7 @@ public class Runner {
         l.Login(username, password);
     }
 
+
     @Test(priority = 2)
     public void addItemsToTheCart() throws InterruptedException {
 
@@ -59,7 +60,7 @@ public class Runner {
 
     @AfterTest
     public void closeBrowser() throws InterruptedException {
-        opc.closeBrower();
+        opc.closeBrowser();
     }
 
     @DataProvider(name = "readTheSheet")
@@ -68,6 +69,5 @@ public class Runner {
         return rd.read_Data();
 
     }
-
 
 }

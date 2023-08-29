@@ -15,9 +15,10 @@ public class OpenBrowserAndCloseIt {
 
         driver.browser().navigateToURL("https://www.saucedemo.com/");
 
+
     }
 
-    public void closeBrower() throws InterruptedException {
+    public void closeBrowser() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
     }

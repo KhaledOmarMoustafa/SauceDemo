@@ -26,6 +26,7 @@ public class Login {
         String current = "https://www.saucedemo.com/inventory.html";
 
         if (!current.equals(url)) {
+            OpenBrowserAndCloseIt.driver.element().assertThat(By.cssSelector("div[class=\"error-message-container error\"]")).exists();
             OpenBrowserAndCloseIt.driver.element().clear(username);
             OpenBrowserAndCloseIt.driver.element().clear(password);
         }
