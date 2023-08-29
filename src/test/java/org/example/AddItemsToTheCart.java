@@ -29,7 +29,6 @@ public class AddItemsToTheCart {
 
         Thread.sleep(250);
 
-        Thread.sleep(250);
 
         By item2 = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
         OpenBrowserAndCloseIt.driver.element().click(item2);
