@@ -14,9 +14,8 @@ D-Execute the test cases using the TestNG Class to generate an Allure Report.
 2-TestNG.
 3-DataDriven (From an excel file).
 4-ShaftEngine.
-5-Allure Report.
-6-Page Object Model Design Pattern (POM).
-7-OOP Concepts.
+5-Page Object Model Design Pattern (POM).
+6-OOP Concepts.
 
 
 The Executed Test Cases Are Generated in order as Follows:
